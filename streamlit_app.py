@@ -5,11 +5,6 @@ import requests
 import pandas as pd
 import json
 
-if isinstance(response_data, dict):
-    fv_df = pd.json_normalize(response_data)
-else:
-    fv_df = pd.DataFrame(response_data)
-
 st.dataframe(fv_df, use_container_width=True)
 
 
